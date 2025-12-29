@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursed. // ACCESS_GRANTED</title>
+    <style>
+        /* RESET I BAZA */
+        body {
+            background-color: #000000;
+            color: #33ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        /* KONTENER */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* TWOJE ASCII ART */
+        .custom-ascii {
+            white-space: pre;
+            color: #ff0000; /* Czerwony dla kontrastu */
+            font-weight: bold;
+            margin-bottom: 40px;
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        /* TYTUŁY SEKCJI */
+        .glitch-text {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #33ff00;
+            display: inline-block;
+        }
+
+        /* ODTWARZACZ DEMO / SNIPPET */
+        .demo-box {
+            background: #0a0a0a;
+            border: 1px dashed #33ff00;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            filter: invert(100%) grayscale(100%) brightness(1.5);
+            height: 25px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* PRZYCISKI STREAMINGOWE */
+        .streaming-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .stream-btn {
+            border: 1px solid #33ff00;
+            color: #33ff00;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.1s;
+        }
+
+        .stream-btn:hover {
+            background-color: #33ff00;
+            color: #000;
+        }
+
+        /* EFEKT STAREGO MONITORA */
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            z-index: 1000;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+		.bottom-ascii {
+    color: #ff0000; /* Czysta czerwień */
+    font-weight: bold;
+    font-size: 10px; /* Mała czcionka, żeby się zmieściło */
+    line-height: 10px;
+    white-space: pre; /* Zachowuje spacje */
+    text-align: center; /* Wyśrodkowanie */
+    margin-top: 60px; /* Odstęp od reszty strony */
+    margin-bottom: 20px;
+    opacity: 0.8;
+    overflow-x: hidden; /* Ukrywa pasek przewijania, jeśli za szerokie */
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="custom-ascii">
+ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░ ░▒▓███████▓▒░▒▓████████▓▒░▒▓███████▓▒░         
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░        
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░        
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓██████▓▒░ ░▒▓█▓▒░░▒▓█▓▒░        
+░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░        
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓██▓▒░ 
+ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓██▓▒░ 
+                                                                                       
+                                                                                       
+  
+</div>
+
+    <p>PROJECT: <span style="color:red">cursed.</span></p>
+    <p>STATUS: UNSTABLE_BUILD</p>
+    <p>USER_AUTH: SUCCESS... <span class="blink">_</span></p>
+
+    <div class="glitch-text">/// DEMO_PREVIEW ///</div>
+
+    <div class="demo-box">
+        <span>FILE: snippet_082.mp3 [RAW_UNMASTERED]</span><br>
+        <audio controls>
+            <source src="twoje_demo.mp3" type="audio/mpeg">
+            Błąd: Brak dostępu do pliku audio.
+        </audio>
+    </div>
+
+    <div class="glitch-text">/// EXTERNAL_NODES ///</div>
+    
+    <div class="streaming-grid">
+        <a href="LINK_SPOTIFY" class="stream-btn" target="_blank">[ Spotify ]</a>
+        <a href="LINK_APPLE" class="stream-btn" target="_blank">[ Apple Music ]</a>
+        <a href="LINK_YT" class="stream-btn" target="_blank">[ YouTube ]</a>
+    </div>
+
+   <div class="glitch-text">/// SYSTEM_LOGS ///</div>
+    <p id="typewriter" style="font-size: 12px; color: #666; min-height: 60px;">
+        </p>
+    <br><br>
+    <hr style="border: 0; border-top: 1px dashed #33ff00;">
+    <p style="font-size: 10px; opacity: 0.5;">
+        © 2025 cursed.records // <a href="mailto:admin@cursed.com">SEND_FEEDBACK</a>
+    </p>
+
+</div>
+<script>
+    const textElement = document.getElementById('typewriter');
+    const logs = [
+        "- Brak wykrytych błędów w ścieżce audio.",
+        "- Synchronizacja z zewnętrznymi serwerami... OK.",
+        "- Manifest usunięty na żądanie administratora."
+    ];
+
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeWriter() {
+        if (lineIndex < logs.length) {
+            if (charIndex < logs[lineIndex].length) {
+                // Dodaj literę
+                textElement.innerHTML += logs[lineIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeWriter, 30); // Prędkość pisania (w ms)
+            } else {
+                // Przejdź do nowej linii
+                textElement.innerHTML += "<br>";
+                lineIndex++;
+                charIndex = 0;
+                setTimeout(typeWriter, 500); // Pauza między liniami
+            }
+        } else {
+            // Dodaj migający kursor na końcu logów
+            textElement.innerHTML += '<span class="blink">_</span>';
+        }
+    }
+
+    // Uruchom po załadowaniu okna
+    window.onload = typeWriter;
+</script>
+<div class="bottom-ascii">
+@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@#==-@@@@@@@@@@@@@@@@@@@@@@@%+=-=*@@@@@@@
+@@@@@@@%+:::.:*#@@@@@@@@@@@@@@@@=::...:+#@@@@@@@
+@@@@@@@%+*-:....:#@@@@@@@@@@@@=-......=#%@@@@@@@
+@@@@@@@@@@=:....::.%@@@@@@@@%.:......:+#@@@@@@@@
+@@@@@@@@@%+:.....-.*@@@@@@@@+......:=#*+@@@@@@@@
+@@@@@@@@@@%+-:...:-.  =@@@@=.:. ..::-+%@@@@@@@@@
+@@@@@@@@@@@@#=...-=+-..:. :---..::-%@@@@@@@@@@@@
+@@@@@@@@@@@@@%=:.-+=##*-.  :-...:=#@@@@@@@@@@@@@
+@@@@@@@@@@@@@@%=..=*@@*:.--:...:*@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@=:=*%+=++*:.::-*@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@#**#@*=-+-.#@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@+-.......*@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@+-......:@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@*--..:..-@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@*-:..-*%@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@#-:=..*%@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@*--=+::*@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@#*===*+*@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@#**==+=*@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@+*+=+=*@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@*+++==+@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@#*+=+=*%@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@###@@***##%@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   SYSTEM_FAILURE
+</div>
+
+</body>
+</html>
